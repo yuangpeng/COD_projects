@@ -1,5 +1,4 @@
-// `include "ctrl_encode_def.v"
-
+`include "ctrl_encode_def.v"
 
 module ctrl(
 input	[5:0]	Op,
@@ -11,21 +10,23 @@ output			MemWrite,
 output			EXTOp,
 output	[2:0]	ALUOp,
 output	[1:0]	NPCOp,
-output			ALUSrc,		// ALU source for A
-output			GPRSel,		// general purpose register selection
-output			WDSel		// (register) write data selection
+output			ALUSrcA,		// ALU source for A
+output			ALUSrcB,		// ALU source for B
+output			GPRSel,			// general purpose register selection
+output			WDSel			// (register) write data selection
 );
    
 	// r format
 	wire rtype  = ~|Op;
-	wire i_add  = rtype& Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]&~Funct[1]&~Funct[0];	// add
-	wire i_sub  = rtype& Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]& Funct[1]&~Funct[0]; 	// sub
-	wire i_and  = rtype& Funct[5]&~Funct[4]&~Funct[3]& Funct[2]&~Funct[1]&~Funct[0]; 	// and
-	wire i_or   = rtype& Funct[5]&~Funct[4]&~Funct[3]& Funct[2]&~Funct[1]& Funct[0]; 	// or
-	wire i_slt  = rtype& Funct[5]&~Funct[4]& Funct[3]&~Funct[2]& Funct[1]&~Funct[0]; 	// slt
-	wire i_sltu = rtype& Funct[5]&~Funct[4]& Funct[3]&~Funct[2]& Funct[1]& Funct[0]; 	// sltu
-	wire i_addu = rtype& Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]&~Funct[1]& Funct[0]; 	// addu
-	wire i_subu = rtype& Funct[5]&~Funct[4]&~Funct[3]&~Funct[2]& Funct[1]& Funct[0]; 	// subu
+	wire i_add  = rtype &  Funct[5] & ~Funct[4] & ~Funct[3] & ~Funct[2] & ~Funct[1] & ~Funct[0];	// add
+	wire i_sub  = rtype &  Funct[5] & ~Funct[4] & ~Funct[3] & ~Funct[2] &  Funct[1] & ~Funct[0]; 	// sub
+	wire i_and  = rtype &  Funct[5] & ~Funct[4] & ~Funct[3] &  Funct[2] & ~Funct[1] & ~Funct[0]; 	// and
+	wire i_or   = rtype &  Funct[5] & ~Funct[4] & ~Funct[3] &  Funct[2] & ~Funct[1] &  Funct[0]; 	// or
+	wire i_slt  = rtype &  Funct[5] & ~Funct[4] &  Funct[3] & ~Funct[2] &  Funct[1] & ~Funct[0]; 	// slt
+	wire i_sltu = rtype &  Funct[5] & ~Funct[4] &  Funct[3] & ~Funct[2] &  Funct[1] &  Funct[0]; 	// sltu
+	wire i_addu = rtype &  Funct[5] & ~Funct[4] & ~Funct[3] & ~Funct[2] & ~Funct[1] &  Funct[0]; 	// addu
+	wire i_subu = rtype &  Funct[5] & ~Funct[4] & ~Funct[3] & ~Funct[2] &  Funct[1] &  Funct[0]; 	// subu
+	wire i_sll  = rtype & ~Funct[5] & ~Funct[4] & ~Funct[3] & ~Funct[2] & ~Funct[1] & ~Funct[0]; 	// sll
 
 	// i format
 	wire i_addi = ~Op[5]&~Op[4]& Op[3]&~Op[2]&~Op[1]&~Op[0];	// addi
@@ -38,10 +39,11 @@ output			WDSel		// (register) write data selection
 	wire i_j    = ~Op[5]&~Op[4]&~Op[3]&~Op[2]& Op[1]&~Op[0];	// j
 
 	// generate control signals
-	assign RegWrite   = rtype | i_lw | i_addi | i_ori; // register write
-	assign MemWrite   = i_sw;                           // memory write
-	assign ALUSrc     = i_lw | i_sw | i_addi | i_ori;   // ALU B is from instruction immediate
-	assign EXTOp      = i_addi | i_lw | i_sw;           // signed extension
+	assign RegWrite		= rtype | i_lw | i_addi | i_ori;	// register write
+	assign MemWrite   	= i_sw;                           	// memory write
+	assign ALUSrcA		= i_sll;							// ALU A is from shift instruction
+	assign ALUSrcB    	= i_lw | i_sw | i_addi | i_ori;   	// ALU B is from instruction immediate
+	assign EXTOp      	= i_addi | i_lw | i_sw;           	// signed extension
 
 	// GPRSel_RD   1'b0
 	// GPRSel_RT   1'b1
@@ -65,8 +67,9 @@ output			WDSel		// (register) write data selection
 	// ALU_OR    3'b100
 	// ALU_SLT   3'b101
 	// ALU_SLTU  3'b110
-	assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu;
-	assign ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu;
-	assign ALUOp[2] = i_or | i_ori | i_slt | i_sltu;
+	// ALU_SLL	 3'b111
+	assign ALUOp[0] = i_add | i_lw | i_sw | i_addi | i_and | i_slt | i_addu | i_sll;
+	assign ALUOp[1] = i_sub | i_beq | i_and | i_sltu | i_subu | i_sll;
+	assign ALUOp[2] = i_or | i_ori | i_slt | i_sltu | i_sll;
 
 endmodule

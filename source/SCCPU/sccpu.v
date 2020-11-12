@@ -20,7 +20,8 @@ output	[31:0]	reg_data,	// selected register data (for debug use)
 	wire  			WDSel;          // (register) write data selection
 	wire  			GPRSel;         // general purpose register selection
    
-	wire        	ALUSrc;      	// ALU source for A
+	wire        	ALUSrcA;      	// ALU source for A
+	wire			ALUSrcB;		// ALU source for B
 	wire       		Zero;        	// ALU ouput zero
 
 	wire 	[31:0] 	NPC;         	// next PC
@@ -30,24 +31,27 @@ output	[31:0]	reg_data,	// selected register data (for debug use)
 	wire 	[4:0]  	rd;          	// rd
 	wire 	[5:0] 	Op;          	// opcode
 	wire 	[5:0] 	Funct;       	// funct
+	wire	[4:0]	shamt;			// shamt
 	wire 	[15:0] 	Imm16;       	// 16-bit immediate
 	wire	[31:0] 	Imm32;       	// 32-bit immediate
 	wire 	[25:0] 	IMM;         	// 26-bit immediate (address)
 	wire 	[4:0]  	A3;          	// register address for write
 	wire 	[31:0] 	WD;          	// register write data
 	wire 	[31:0] 	RD1;         	// register data specified by rs
+	wire	[31:0]	A;				// operator for ALU B
 	wire 	[31:0] 	B;           	// operator for ALU B
 	
-	assign Op 		= instr[31:26]; // instruction
-	assign Funct 	= instr[5:0]; 	// funct
-	assign rs		= instr[25:21]; // rs
-	assign rt 		= instr[20:16]; // rt
-	assign rd 		= instr[15:11]; // rd
-	assign Imm16 	= instr[15:0];	// 16-bit immediate
-	assign IMM 		= instr[25:0];  // 26-bit immediate
+	assign Op 		= instr[31:26]; 		// instruction
+	assign Funct 	= instr[5:0]; 			// funct
+	assign rs		= instr[25:21]; 		// rs
+	assign rt 		= instr[20:16]; 		// rt
+	assign rd 		= instr[15:11]; 		// rd
+	assign Imm16 	= instr[15:0];			// 16-bit immediate
+	assign IMM 		= instr[25:0];  		// 26-bit immediate
+	assign shamt	= {27b'0,instr[10:6]};	// (27+5)-bit shamt
    
 	// instantiation of control unit
-	ctrl U_CTRL( 
+	ctrl U_CTRL(
 		.Op(Op),
 		.Funct(Funct),
 		.Zero(Zero),
@@ -56,7 +60,8 @@ output	[31:0]	reg_data,	// selected register data (for debug use)
 		.EXTOp(EXTOp),
 		.ALUOp(ALUOp),
 		.NPCOp(NPCOp), 
-		.ALUSrc(ALUSrc),
+		.ALUSrcA(ALUSrcA),
+		.ALUSrcB(ALUSrcB),
 		.GPRSel(GPRSel),
 		.WDSel(WDSel)
 	);
@@ -68,9 +73,9 @@ output	[31:0]	reg_data,	// selected register data (for debug use)
 		.NPC(NPC),
 		.PC(PC)
 	); 
-   
+	
 	// instantiation of NPC
-	NPC U_NPC ( 
+	NPC U_NPC(
 		.PC(PC),
 		.NPCOp(NPCOp),
 		.IMM(IMM),
@@ -78,22 +83,22 @@ output	[31:0]	reg_data,	// selected register data (for debug use)
 	);
    
 	// instantiation of register file
-	RF U_RF (
+	RF U_RF(
 		.clk(clk),
 		.rst(rst),
 		.RFWr(RegWrite), 
 		.A1(rs),
 		.A2(rt),
-		.A3(A3), 
-		.WD(WD), 
+		.A3(A3),
+		.WD(WD),
 		.RD1(RD1),
 		.RD2(writedata),
 		.reg_sel(reg_sel),
-		.reg_data(reg_data) 
+		.reg_data(reg_data)
 	);
    
 	// mux for register data to write
-	mux2 #(5) U_MUX2_GPR_A3 (
+	mux2 #(5) U_MUX2_GPR_A3(
 		.d0(rd),
 		.d1(rt), 
 		.s(GPRSel),
@@ -101,7 +106,7 @@ output	[31:0]	reg_data,	// selected register data (for debug use)
 	);
    
 	// mux for register address to write
-	mux2 #(32) U_MUX2_GPR_WD (
+	mux2 #(32) U_MUX2_GPR_WD(
 		.d0(aluout),
 		.d1(readdata),
 		.s(WDSel),
@@ -109,23 +114,31 @@ output	[31:0]	reg_data,	// selected register data (for debug use)
 	);
 
 	// mux for signed extension or zero extension
-	EXT U_EXT ( 
+	EXT U_EXT(
 		.Imm16(Imm16),
 		.EXTOp(EXTOp),
-		.Imm32(Imm32) 
+		.Imm32(Imm32)
+	);
+	
+	// mux ofr ALU A
+	mux #(32) U_MUX_ALU_A(
+		.d0(shamt),
+		.d1(RD1),
+		.s(ALUSrcA),
+		.y(A)
 	);
    
 	// mux for ALU B
-	mux2 #(32) U_MUX_ALU_B (
+	mux2 #(32) U_MUX_ALU_B(
 		.d0(writedata),
 		.d1(Imm32),
-		.s(ALUSrc),
+		.s(ALUSrcB),
 		.y(B)
 	);   
    
 	// instantiation of alu
-	alu U_ALU ( 
-		.A(RD1),
+	alu U_ALU( 
+		.A(A),
 		.B(B),
 		.ALUOp(ALUOp),
 		.C(aluout),

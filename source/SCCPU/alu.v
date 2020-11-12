@@ -18,6 +18,7 @@ output						Zero
             `ALU_OR:   	C = A | B;                      				// OR/ORI
             `ALU_SLT:  	C = (A < B) ? 32'd1 : 32'd0;    				// SLT/SLTI
             `ALU_SLTU: 	C = ({1'b0, A} < {1'b0, B}) ? 32'd1 : 32'd0;	// SLTU
+			`ALU_SLL:	C = B << A										// SLL
             default:   	C = A;                          				// Undefined
         endcase
     end
