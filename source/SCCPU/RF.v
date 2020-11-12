@@ -8,6 +8,7 @@ input	[4:0]	A2,
 input	[4:0]  	A3,
 input	[31:0] 	WD,
 input	[4:0]  	reg_sel,
+
 output	[31:0] 	RD1,
 output	[31:0] 	RD2,
 output 	[31:0] 	reg_data

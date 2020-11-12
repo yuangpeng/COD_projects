@@ -2,6 +2,7 @@ module PC(
 input				clk;
 input				rst;
 input		[31:0]	NPC;
+
 output	reg	[31:0]	PC;
 );
 

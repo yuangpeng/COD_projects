@@ -1,10 +1,11 @@
 `include "ctrl_encode_def.v"
 
 module NPC(
-input		[31:0]	PC;			//pc
-input		[1:0]	NPCOp		//next pc operation
-input		[25:0]	IMM			//immediate
-output	reg	[31:0]	NPC			//next pc
+input		[31:0]	PC,
+input		[1:0]	NPCOp,
+input		[25:0]	IMM,
+
+output	reg	[31:0]	NPC
 );
 	wire [31:0] PCPLUS4;
 	assign PCPLUS4 = PC + 4;
