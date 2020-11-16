@@ -50,7 +50,7 @@ input	[WIDTH-1:0]	d6,
 input	[WIDTH-1:0]	d7,
 input	[2:0]		s,
 
-output	[WIDTH-1:0]	y,
+output	[WIDTH-1:0]	y
 );
 
     reg	[WIDTH-1:0] y_r;

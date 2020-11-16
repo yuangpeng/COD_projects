@@ -1,8 +1,8 @@
 `include "ctrl_encode_def.v"
 
 module NPC(
-input		[31:0]	PC,
 input		[1:0]	NPCOp,
+input		[31:0]	PC,
 input		[25:0]	IMM,
 
 output	reg	[31:0]	NPC

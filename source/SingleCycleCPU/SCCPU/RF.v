@@ -15,10 +15,10 @@ output 	[31:0] 	reg_data
 );
 
 	reg	[31:0]	rf[31:0];
+	integer i;
 	
 	always@(posedge clk, posedge rst)
 		if(rst) begin
-			integer i;
 			for(i = 1; i < 32; i = i + 1)
 				rf[i] <= 0;
 		end

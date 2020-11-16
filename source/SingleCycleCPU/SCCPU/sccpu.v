@@ -10,7 +10,7 @@ output	[31:0]	aluout,		// ALU output for Memory Address
 output	[31:0]	writedata,	// data to data memory
 
 input	[4:0]	reg_sel,	// register selection (for debug use)
-output	[31:0]	reg_data,	// selected register data (for debug use)
+output	[31:0]	reg_data	// selected register data (for debug use)
 );
 
 	wire        	RegWrite;		// control signal to register write
@@ -43,15 +43,15 @@ output	[31:0]	reg_data,	// selected register data (for debug use)
 	wire 	[31:0] 	B;           	// operator for ALU B
 	wire	[31:0]	luiImm32;		// 32-bit lui instruction
 	
-	assign Op 		= instr[31:26]; 		// instruction
-	assign Funct 	= instr[5:0]; 			// funct
-	assign rs		= instr[25:21]; 		// rs
-	assign rt 		= instr[20:16]; 		// rt
-	assign rd 		= instr[15:11]; 		// rd
-	assign Imm16 	= instr[15:0];			// 16-bit immediate
-	assign IMM 		= instr[25:0];  		// 26-bit immediate
-	assign shamt	= {27b'0, instr[10:6]};	// (27+5)-bit shamt
-	assign luiImm32	= {instr[15:0], 16b'0};	// upper imm16 + 16b'0
+	assign Op 		= instr[31:26]; 			// instruction
+	assign Funct 	= instr[5:0]; 				// funct
+	assign rs		= instr[25:21]; 			// rs
+	assign rt 		= instr[20:16]; 			// rt
+	assign rd 		= instr[15:11]; 			// rd
+	assign Imm16 	= instr[15:0];				// 16-bit immediate
+	assign IMM 		= instr[25:0];  			// 26-bit immediate
+	assign shamt	= {27'b0, instr[10:6]};		// (27+5)-bit shamt
+	assign luiImm32	= {instr[15:0], 16'b0};		// upper imm16 + 16b'0
    
 	// instantiation of control unit
 	ctrl U_CTRL(

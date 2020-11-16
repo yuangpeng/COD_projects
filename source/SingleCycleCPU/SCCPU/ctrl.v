@@ -52,7 +52,7 @@ output			WDSel			// (register) write data selection
 
 	// GPRSel_RD   1'b0
 	// GPRSel_RT   1'b1
-	assign GPRSel = i_lw | i_addi | i_ori i_lui;
+	assign GPRSel = i_lw | i_addi | i_ori | i_lui;
 
 	// WDSel_FromALU aluout 	 2'b00
 	// WDSel_FromMEM readdata	 2'b01

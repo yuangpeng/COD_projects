@@ -10,7 +10,7 @@ output			MemWrite,
 output			EXTOp,
 output	[2:0]	ALUOp,
 output	[1:0]	NPCOp,
-output			ALUSrcA,		// ALU source for A
+output	[1:0]	ALUSrcA,		// ALU source for A
 output			ALUSrcB,		// ALU source for B
 output			GPRSel,			// general purpose register selection
 output			WDSel			// (register) write data selection
@@ -29,30 +29,35 @@ output			WDSel			// (register) write data selection
 	wire i_sll  = rtype & ~Funct[5] & ~Funct[4] & ~Funct[3] & ~Funct[2] & ~Funct[1] & ~Funct[0]; 	// sll
 
 	// i format
-	wire i_addi = ~Op[5]&~Op[4]& Op[3]&~Op[2]&~Op[1]&~Op[0];	// addi
-	wire i_ori  = ~Op[5]&~Op[4]& Op[3]& Op[2]&~Op[1]& Op[0]; 	// ori
-	wire i_lw   =  Op[5]&~Op[4]&~Op[3]&~Op[2]& Op[1]& Op[0];	// lw
-	wire i_sw   =  Op[5]&~Op[4]& Op[3]&~Op[2]& Op[1]& Op[0]; 	// sw
-	wire i_beq  = ~Op[5]&~Op[4]&~Op[3]& Op[2]&~Op[1]&~Op[0]; 	// beq
+	wire i_addi = ~Op[5] & ~Op[4] &  Op[3] & ~Op[2] & ~Op[1] & ~Op[0];	// addi
+	wire i_ori  = ~Op[5] & ~Op[4] &  Op[3] &  Op[2] & ~Op[1] &  Op[0];	// ori
+	wire i_lw   =  Op[5] & ~Op[4] & ~Op[3] & ~Op[2] &  Op[1] &  Op[0];	// lw
+	wire i_sw   =  Op[5] & ~Op[4] &  Op[3] & ~Op[2] &  Op[1] &  Op[0];	// sw
+	wire i_beq  = ~Op[5] & ~Op[4] & ~Op[3] &  Op[2] & ~Op[1] & ~Op[0];	// beq
+	wire i_lui	= ~Op[5] & ~Op[4] &  Op[3] &  Op[2] &  Op[1] &  Op[0];	// lui
 
 	// j format
-	wire i_j    = ~Op[5]&~Op[4]&~Op[3]&~Op[2]& Op[1]&~Op[0];	// j
+	wire i_j    = ~Op[5] & ~Op[4] & ~Op[3] & ~Op[2] &  Op[1] & ~Op[0];	// j
 
 	// generate control signals
-	assign RegWrite		= rtype | i_lw | i_addi | i_ori;	// register write
-	assign MemWrite   	= i_sw;                           	// memory write
-	assign ALUSrcA		= i_sll;							// ALU A is from shift instruction
-	assign ALUSrcB    	= i_lw | i_sw | i_addi | i_ori;   	// ALU B is from instruction immediate
-	assign EXTOp      	= i_addi | i_lw | i_sw;           	// signed extension
+	assign RegWrite		= rtype | i_lw | i_addi | i_ori | i_lui;		// register write
+	assign MemWrite   	= i_sw;                           				// memory write
+	// 32-bit RD1 from rs	2b'00
+	// 32-bit shamt			2b'01
+	// 32-bit luiImm32		2b'10
+	assign ALUSrcA[0]	= i_sll;
+	assign ALUSrcA[1]	= i_lui;
+	assign ALUSrcB    	= i_lw | i_sw | i_addi | i_ori | i_lui;   	// ALU B is from instruction immediate
+	assign EXTOp      	= i_addi | i_lw | i_sw;           			// signed extension
 
 	// GPRSel_RD   1'b0
 	// GPRSel_RT   1'b1
-	assign GPRSel = i_lw | i_addi | i_ori;
+	assign GPRSel = i_lw | i_addi | i_ori | i_lui;
 
-	// WDSel_FromALU 2'b00
-	// WDSel_FromMEM 2'b01
-	// WDSel_FromPC  2'b10 
-	assign WDSel = i_lw;  
+	// WDSel_FromALU aluout 	 2'b00
+	// WDSel_FromMEM readdata	 2'b01
+	// WDSel_FromPC 			 2'b10 
+	assign WDSel = i_lw;
 
 	// NPC_PLUS4   2'b00
 	// NPC_BRANCH  2'b01
