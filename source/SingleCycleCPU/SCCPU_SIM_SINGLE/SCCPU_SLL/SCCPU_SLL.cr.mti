@@ -1,0 +1,53 @@
+C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/mux.v {0 {vlog -work work -novopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/mux.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+** Error (suppressible): (vlog-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/alu.v {0 {vlog -work work -novopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/alu.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+** Error (suppressible): (vlog-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/PC.v {0 {vlog -work work -novopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/PC.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+** Error (suppressible): (vlog-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/sccpu.v {0 {vlog -work work -novopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/sccpu.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+** Error (suppressible): (vlog-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIMTop/sccomp.v {0 {vlog -work work -novopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIMTop/sccomp.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+** Error (suppressible): (vlog-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/RF.v {0 {vlog -work work -novopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/RF.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+** Error (suppressible): (vlog-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIMTop/im.v {0 {vlog -work work -novopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIMTop/im.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+** Error (suppressible): (vlog-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIMTop/dm.v {0 {vlog -work work -novopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIMTop/dm.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+** Error (suppressible): (vlog-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIMTop/sccomp_tb.v {0 {vlog -work work -novopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIMTop/sccomp_tb.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+** Error (suppressible): (vlog-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/ctrl.v {0 {vlog -work work -novopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/ctrl.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+** Error (suppressible): (vlog-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/ctrl_encode_def.v {0 {vlog -work work -novopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/ctrl_encode_def.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+** Error (suppressible): (vlog-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/EXT.v {0 {vlog -work work -novopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/EXT.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+** Error (suppressible): (vlog-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/NPC.v {0 {vlog -work work -novopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_SIM_SINGLE/SCCPU_SLL/NPC.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+** Error (suppressible): (vlog-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+
+} {} {}}

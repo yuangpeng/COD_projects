@@ -3,7 +3,7 @@
 # sll srl sra sllv srlv srav
 # sw sh sb
 # lw lh lhu lb lbu
-   
+
 lui   $3, 0x9876        # $3=0x98760000                               # 3c039876
 ori   $2, $0, 0x1234    # $2=0x1234                                   # 34021234
 subu  $8, $3, $2        # $8=0x98760000-0x1234=0x9875edcc             # 00624023
