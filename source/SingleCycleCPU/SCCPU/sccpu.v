@@ -3,12 +3,13 @@ input			clk,		// clock
 input			rst,		// reset
 input	[31:0]	instr,		// instruction
 input	[31:0]	readdata,	// data from data memory
-input	[4:0]	reg_sel,	// register selection (for debug use)
 
-output	[31:0]	PC,			// PC address
+output	[31:0]	PC,			// PC address for Instruction Memory Address
 output			MemWrite,	// memory write
-output	[31:0]	aluout,		// ALU output
+output	[31:0]	aluout,		// ALU output for Memory Address
 output	[31:0]	writedata,	// data to data memory
+
+input	[4:0]	reg_sel,	// register selection (for debug use)
 output	[31:0]	reg_data,	// selected register data (for debug use)
 );
 
@@ -33,13 +34,14 @@ output	[31:0]	reg_data,	// selected register data (for debug use)
 	wire 	[5:0] 	Funct;       	// funct
 	wire	[4:0]	shamt;			// shamt
 	wire 	[15:0] 	Imm16;       	// 16-bit immediate
-	wire	[31:0] 	Imm32;       	// 32-bit immediate
+	wire	[31:0] 	Imm32;       	// 32-bit immediate Sign_EXT from Imm16
 	wire 	[25:0] 	IMM;         	// 26-bit immediate (address)
 	wire 	[4:0]  	A3;          	// register address for write
 	wire 	[31:0] 	WD;          	// register write data
 	wire 	[31:0] 	RD1;         	// register data specified by rs
-	wire	[31:0]	A;				// operator for ALU B
+	wire	[31:0]	A;				// operator for ALU A
 	wire 	[31:0] 	B;           	// operator for ALU B
+	wire	[31:0]	luiImm32;		// 32-bit lui instruction
 	
 	assign Op 		= instr[31:26]; 		// instruction
 	assign Funct 	= instr[5:0]; 			// funct
@@ -48,7 +50,8 @@ output	[31:0]	reg_data,	// selected register data (for debug use)
 	assign rd 		= instr[15:11]; 		// rd
 	assign Imm16 	= instr[15:0];			// 16-bit immediate
 	assign IMM 		= instr[25:0];  		// 26-bit immediate
-	assign shamt	= {27b'0,instr[10:6]};	// (27+5)-bit shamt
+	assign shamt	= {27b'0, instr[10:6]};	// (27+5)-bit shamt
+	assign luiImm32	= {instr[15:0], 16b'0};	// upper imm16 + 16b'0
    
 	// instantiation of control unit
 	ctrl U_CTRL(
@@ -86,22 +89,22 @@ output	[31:0]	reg_data,	// selected register data (for debug use)
 	RF U_RF(
 		.clk(clk),
 		.rst(rst),
-		.RFWr(RegWrite), 
+		.RFWr(RegWrite),
 		.A1(rs),
 		.A2(rt),
 		.A3(A3),
 		.WD(WD),
 		.RD1(RD1),
 		.RD2(writedata),
-		.reg_sel(reg_sel),
-		.reg_data(reg_data)
+		.reg_sel(reg_sel),			// for debug only
+		.reg_data(reg_data)			// for debug only
 	);
    
 	// mux for register data to write
 	mux2 #(5) U_MUX2_GPR_A3(
 		.d0(rd),
-		.d1(rt), 
-		.s(GPRSel),
+		.d1(rt),
+		.s(GPRSel),			// which register to write
 		.y(A3)
 	);
    
@@ -109,7 +112,7 @@ output	[31:0]	reg_data,	// selected register data (for debug use)
 	mux2 #(32) U_MUX2_GPR_WD(
 		.d0(aluout),
 		.d1(readdata),
-		.s(WDSel),
+		.s(WDSel),			// which data to write to register
 		.y(WD)
 	);
 
@@ -121,9 +124,10 @@ output	[31:0]	reg_data,	// selected register data (for debug use)
 	);
 	
 	// mux ofr ALU A
-	mux #(32) U_MUX_ALU_A(
-		.d0(shamt),
-		.d1(RD1),
+	mux4 #(32) U_MUX_ALU_A(
+		.d0(RD1),
+		.d1(shamt),
+		.d2(luiImm32),
 		.s(ALUSrcA),
 		.y(A)
 	);
