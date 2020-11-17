@@ -5,6 +5,13 @@ Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 Top level modules:
 	sccomp_tb
 
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/sccomp.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/sccomp.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module sccomp
+
+Top level modules:
+	sccomp
+
 } {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/ctrl.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/ctrl.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 -- Compiling module ctrl
@@ -22,12 +29,12 @@ Top level modules:
 } {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/ctrl_encode_def.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/ctrl_encode_def.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 
-} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/EXT.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/EXT.v
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/dm.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/dm.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
--- Compiling module EXT
+-- Compiling module dm
 
 Top level modules:
-	EXT
+	dm
 
 } {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/NPC.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/NPC.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
@@ -36,19 +43,12 @@ Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 Top level modules:
 	NPC
 
-} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/dm.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/dm.v
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/EXT.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/EXT.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
--- Compiling module dm
+-- Compiling module EXT
 
 Top level modules:
-	dm
-
-} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/alu.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/alu.v
-Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
--- Compiling module alu
-
-Top level modules:
-	alu
+	EXT
 
 } {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/mux.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/mux.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
@@ -62,6 +62,13 @@ Top level modules:
 	mux4
 	mux8
 	mux16
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/alu.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/alu.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module alu
+
+Top level modules:
+	alu
 
 } {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/PC.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/sll_lui/PC.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
