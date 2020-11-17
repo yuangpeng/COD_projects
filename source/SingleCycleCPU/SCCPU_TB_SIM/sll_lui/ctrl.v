@@ -47,7 +47,7 @@ output			WDSel			// (register) write data selection
 	// 32-bit luiImm32		2b'10
 	assign ALUSrcA[0]	= i_sll;
 	assign ALUSrcA[1]	= i_lui;
-	assign ALUSrcB    	= i_lw | i_sw | i_addi | i_ori | i_lui;   	// ALU B is from instruction immediate
+	assign ALUSrcB    	= i_lw | i_sw | i_addi | i_ori;   			// ALU B is from instruction immediate
 	assign EXTOp      	= i_addi | i_lw | i_sw;           			// signed extension
 
 	// GPRSel_RD   1'b0

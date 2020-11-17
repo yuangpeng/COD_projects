@@ -7,11 +7,12 @@ input	[4:0]	A1,
 input	[4:0]	A2,
 input	[4:0]  	A3,
 input	[31:0] 	WD,
-input	[4:0]  	reg_sel,
 
 output	[31:0] 	RD1,
 output	[31:0] 	RD2,
-output 	[31:0] 	reg_data
+
+input	[4:0]	reg_sel,	// register selection (for debug use)
+output	[31:0]	reg_data	// selected register data (for debug use)
 );
 
 	reg	[31:0]	rf[31:0];

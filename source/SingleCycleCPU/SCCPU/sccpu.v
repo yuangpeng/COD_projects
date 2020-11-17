@@ -21,7 +21,7 @@ output	[31:0]	reg_data	// selected register data (for debug use)
 	wire  			WDSel;          // (register) write data selection
 	wire  			GPRSel;         // general purpose register selection
    
-	wire        	ALUSrcA;      	// ALU source for A
+	wire    [1:0]   ALUSrcA;      	// ALU source for A
 	wire			ALUSrcB;		// ALU source for B
 	wire       		Zero;        	// ALU ouput zero
 
@@ -32,7 +32,7 @@ output	[31:0]	reg_data	// selected register data (for debug use)
 	wire 	[4:0]  	rd;          	// rd
 	wire 	[5:0] 	Op;          	// opcode
 	wire 	[5:0] 	Funct;       	// funct
-	wire	[4:0]	shamt;			// shamt
+	wire	[31:0]	shamt;			// shamt
 	wire 	[15:0] 	Imm16;       	// 16-bit immediate
 	wire	[31:0] 	Imm32;       	// 32-bit immediate Sign_EXT from Imm16
 	wire 	[25:0] 	IMM;         	// 26-bit immediate (address)
