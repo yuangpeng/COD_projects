@@ -136,7 +136,6 @@ output	[31:0]	reg_data	// selected register data (for debug use)
 		.d1(shamt),
 		.d2(luiImm32),
 		.d3(RD1LOW5),
-		.d4(32'b0)
 		.s(ALUSrcA),
 		.y(A)
 	);
