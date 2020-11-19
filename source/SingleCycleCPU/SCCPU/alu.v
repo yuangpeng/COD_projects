@@ -20,6 +20,8 @@ output						Zero
             `ALU_SLTU: 	C = ({1'b0, A} < {1'b0, B}) ? 32'd1 : 32'd0;	// SLTU
 			`ALU_SLL:	C = B << A;										// SLL
 			`ALU_NOR:	C = ~ (A | B);									// NOR
+			`ALU_SRL:	C = B >> A;										// SRL
+			`ALU_JR:	C = B;											// JR
             default:   	C = A;                          				// Undefined
         endcase
     end

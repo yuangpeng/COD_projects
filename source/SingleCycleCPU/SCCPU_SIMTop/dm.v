@@ -1,4 +1,3 @@
-// data memory
 module dm(
 input			clk,
 input			DMWr,

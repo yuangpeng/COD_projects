@@ -2,7 +2,7 @@
 `define NPC_PLUS4   	2'b00
 `define NPC_BRANCH  	2'b01
 `define NPC_JUMP    	2'b10
-
+`define	NPC_JUMPR		2'b11
 
 // ALU control signal
 `define ALU_NOP  	4'b0000 
@@ -14,3 +14,5 @@
 `define ALU_SLTU  	4'b0110
 `define	ALU_SLL		4'b0111
 `define	ALU_NOR		4'b1000
+`define ALU_SRL		4'b1001
+`define ALU_JR		4'b1010

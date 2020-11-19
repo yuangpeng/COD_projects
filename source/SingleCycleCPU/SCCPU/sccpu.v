@@ -18,8 +18,8 @@ output	[31:0]	reg_data	// selected register data (for debug use)
 	wire	[3:0]	ALUOp;       	// ALU opertion
 	wire 	[1:0]  	NPCOp;     	 	// next PC operation
 
-	wire  			WDSel;          // (register) write data selection
-	wire  			GPRSel;         // general purpose register selection
+	wire  	[1:0]	WDSel;          // (register) write data selection
+	wire  	[1:0]	GPRSel;         // general purpose register selection
    
 	wire    [1:0]   ALUSrcA;      	// ALU source for A
 	wire			ALUSrcB;		// ALU source for B
@@ -39,6 +39,7 @@ output	[31:0]	reg_data	// selected register data (for debug use)
 	wire 	[4:0]  	A3;          	// register address for write
 	wire 	[31:0] 	WD;          	// register write data
 	wire 	[31:0] 	RD1;         	// register data specified by rs
+	wire	[31:0]	RD1LOW5;		// register data specified by rs[4:0]
 	wire	[31:0]	A;				// operator for ALU A
 	wire 	[31:0] 	B;           	// operator for ALU B
 	wire	[31:0]	luiImm32;		// 32-bit lui instruction
@@ -51,6 +52,7 @@ output	[31:0]	reg_data	// selected register data (for debug use)
 	assign Imm16 	= instr[15:0];				// 16-bit immediate
 	assign IMM 		= instr[25:0];  			// 26-bit immediate
 	assign shamt	= {27'b0, instr[10:6]};		// (27+5)-bit shamt
+	assign RD1LOW5	= {27'b0, RD1[4:0]};		// (27+5)-bit shamt
 	assign luiImm32	= {instr[15:0], 16'b0};		// upper imm16 + 16b'0
    
 	// instantiation of control unit
@@ -82,6 +84,7 @@ output	[31:0]	reg_data	// selected register data (for debug use)
 		.PC(PC),
 		.NPCOp(NPCOp),
 		.IMM(IMM),
+		.RD1(RD1),
 		.NPC(NPC)
 	);
    
@@ -101,18 +104,22 @@ output	[31:0]	reg_data	// selected register data (for debug use)
 	);
    
 	// mux for register data to write
-	mux2 #(5) U_MUX2_GPR_A3(
+	mux4 #(5) U_MUX2_GPR_A3(
 		.d0(rd),
 		.d1(rt),
-		.s(GPRSel),			// which register to write
+		.d2(5'b11111),
+		.d3(5'b0),
+		.s(GPRSel),					// which register to write
 		.y(A3)
 	);
    
 	// mux for register address to write
-	mux2 #(32) U_MUX2_GPR_WD(
+	mux4 #(32) U_MUX2_GPR_WD(
 		.d0(aluout),
 		.d1(readdata),
-		.s(WDSel),			// which data to write to register
+		.d2(PC + 4),
+		.d3(32'b0),
+		.s(WDSel),					// which data to write to register
 		.y(WD)
 	);
 
@@ -128,6 +135,8 @@ output	[31:0]	reg_data	// selected register data (for debug use)
 		.d0(RD1),
 		.d1(shamt),
 		.d2(luiImm32),
+		.d3(RD1LOW5),
+		.d4(32'b0)
 		.s(ALUSrcA),
 		.y(A)
 	);
