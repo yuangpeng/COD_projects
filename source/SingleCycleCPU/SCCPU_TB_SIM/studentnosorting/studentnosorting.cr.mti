@@ -5,7 +5,7 @@ Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 Top level modules:
 	sccpu
 
-} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/RF.v {1 {vlog -work work -vopt -stats=none {C:\Users\Bronkape\Documents\WHUer\COD_project\source\SingleCycleCPU\SCCPU_TB_SIM\studentnosorting\RF.v}
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/RF.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/RF.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 -- Compiling module RF
 
@@ -19,19 +19,19 @@ Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 Top level modules:
 	sccomp_tb
 
-} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/ctrl.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/ctrl.v
-Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
--- Compiling module ctrl
-
-Top level modules:
-	ctrl
-
 } {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/sccomp.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/sccomp.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 -- Compiling module sccomp
 
 Top level modules:
 	sccomp
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/ctrl.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/ctrl.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module ctrl
+
+Top level modules:
+	ctrl
 
 } {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/im.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/im.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
@@ -43,12 +43,12 @@ Top level modules:
 } {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/ctrl_encode_def.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/ctrl_encode_def.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 
-} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/EXT.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/EXT.v
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/dm.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/dm.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
--- Compiling module EXT
+-- Compiling module dm
 
 Top level modules:
-	EXT
+	dm
 
 } {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/NPC.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/NPC.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
@@ -57,19 +57,12 @@ Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 Top level modules:
 	NPC
 
-} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/dm.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/dm.v
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/EXT.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/EXT.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
--- Compiling module dm
+-- Compiling module EXT
 
 Top level modules:
-	dm
-
-} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/alu.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/alu.v
-Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
--- Compiling module alu
-
-Top level modules:
-	alu
+	EXT
 
 } {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/mux.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/mux.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
@@ -83,6 +76,13 @@ Top level modules:
 	mux4
 	mux8
 	mux16
+
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/alu.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/alu.v
+Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module alu
+
+Top level modules:
+	alu
 
 } {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/PC.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/PC.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019

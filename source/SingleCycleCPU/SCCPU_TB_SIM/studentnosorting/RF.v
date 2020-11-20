@@ -19,7 +19,7 @@ output	[31:0]	reg_data	// selected register data (for debug use)
 	
 	always@(posedge clk, posedge rst)
 		if(rst) begin
-			for(i = 0; i < 32; i = i + 1)
+			for(i = 1; i < 32; i = i + 1)
 				rf[i] <= 0;
 		end
 		else 
