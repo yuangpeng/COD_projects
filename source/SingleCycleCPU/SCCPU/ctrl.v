@@ -31,7 +31,7 @@ output	[1:0]	WDSel			// (register) write data selection
 	wire i_srl	= rtype & ~Funct[5] & ~Funct[4] & ~Funct[3] & ~Funct[2] &  Funct[1] & ~Funct[0]; 	// srl
 	wire i_sllv = rtype & ~Funct[5] & ~Funct[4] & ~Funct[3] &  Funct[2] & ~Funct[1] & ~Funct[0]; 	// sllv
 	wire i_srlv = rtype & ~Funct[5] & ~Funct[4] & ~Funct[3] &  Funct[2] &  Funct[1] & ~Funct[0]; 	// srlv
-	wire i_jr	= rtype & ~Funct[5] & ~Funct[4] &  Funct[3] &  Funct[2] &  Funct[1] &  Funct[0]; 	// jr
+	wire i_jr	= rtype & ~Funct[5] & ~Funct[4] &  Funct[3] & ~Funct[2] & ~Funct[1] & ~Funct[0]; 	// jr
 	wire i_jalr	= rtype & ~Funct[5] & ~Funct[4] &  Funct[3] & ~Funct[2] & ~Funct[1] &  Funct[0]; 	// jalr
 
 	// i format
