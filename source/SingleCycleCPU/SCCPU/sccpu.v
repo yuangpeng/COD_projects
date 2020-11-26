@@ -130,7 +130,7 @@ output	[31:0]	reg_data	// selected register data (for debug use)
 		.Imm32(Imm32)
 	);
 	
-	// mux ofr ALU A
+	// mux for ALU A
 	mux4 #(32) U_MUX_ALU_A(
 		.d0(RD1),
 		.d1(shamt),

@@ -1,13 +1,13 @@
 // testbench for simulation
-module sccomp_tb();
+module mccomp_tb();
 
-	reg				clk;
+	reg  			clk;
 	reg				rstn;
 	reg		[4:0]	reg_sel;
 	wire	[31:0]	reg_data;
-
+    
 	// instantiation of sccomp    
-	sccomp U_SCCOMP(
+	mccomp U_MCCOMP(
 		.clk(clk),
 		.rstn(rstn),
 		.reg_sel(reg_sel),
@@ -15,10 +15,10 @@ module sccomp_tb();
 	);
 
 	initial begin
-	// load instructions into instruction memory
-	$readmemh("studentnosorting.dat", U_SCCOMP.U_IM.ROM);
-	// $monitor("PC = 0x%8X, instr = 0x%8X", U_SCCOMP.PC, U_SCCOMP.instr);
-	// used for debug
+		// load instructions into instruction memory
+		$readmemh("sll_lui.dat", U_MCCOMP.U_DM.dmem);
+		// $monitor("PC = 0x%8X, instr = 0x%8X", U_MCCOMP.PC, U_MCCOMP.instr);
+		// used for debug
 		clk = 1;
 		rstn = 1;
 		#5;
@@ -32,5 +32,5 @@ module sccomp_tb();
 	always begin
 		#(50) clk = ~clk;
 	end
-   
+	
 endmodule

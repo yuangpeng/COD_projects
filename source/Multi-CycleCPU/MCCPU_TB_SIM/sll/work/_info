@@ -1,0 +1,315 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/modeltech64_10.5/examples
+T_opt
+!s110 1606395202
+Vn7F^0cTeioaYkl>GgDen31
+04 9 4 work mccomp_tb fast 0
+=1-081f7107c9df-5fbfa542-337-14e0
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+valu
+Z1 !s110 1606395199
+!i10b 1
+!s100 N798d7ojFCYhzMjQcW3ib1
+IR?R<Q9kP1cXMkbzLge?`B1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll
+w1606394534
+8C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/alu.v
+FC:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/alu.v
+L0 3
+Z4 OL;L;10.5;63
+r1
+!s85 0
+31
+Z5 !s108 1606395199.000000
+!s107 ctrl_encode_def.v|C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/alu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/alu.v|
+!i113 0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vctrl
+R1
+!i10b 1
+!s100 NziF3mb`La4XO6?@J32:=1
+IJ`JLJ=;W2g4CWLLRMWE^e2
+R2
+R3
+w1606395185
+8C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/ctrl.v
+FC:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/ctrl.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 ctrl_encode_def.v|C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/ctrl.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/ctrl.v|
+!i113 0
+R6
+R0
+vdm
+R1
+!i10b 1
+!s100 k3D[3WIV>UcG3FHWX8^Ao3
+I85P;iFacH=7j[;km@`IFj1
+R2
+R3
+w1606392789
+8C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/dm.v
+FC:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/dm.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/dm.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/dm.v|
+!i113 0
+R6
+R0
+vEXT
+R1
+!i10b 1
+!s100 ]TSf^Gl32YKVBniDdW^2g3
+IYNg>^mR5b^CNA[AMLi<P@1
+R2
+R3
+Z7 w1605864260
+8C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/EXT.v
+FC:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/EXT.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/EXT.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/EXT.v|
+!i113 0
+R6
+R0
+n@e@x@t
+vflopenr
+R1
+!i10b 1
+!s100 T@;_Rb^4HMRSTmF^dWiiM3
+IR<iQc7bUmFHKPfnKTSAj]1
+R2
+R3
+w1606382496
+8C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/flopenr.v
+FC:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/flopenr.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/flopenr.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/flopenr.v|
+!i113 0
+R6
+R0
+vflopr
+R1
+!i10b 1
+!s100 bf5jk>7=TH0M_l@T=XW[?2
+Ia9H@;mn1D16V:bL>@N]HE3
+R2
+R3
+w1606382490
+8C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/flopr.v
+FC:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/flopr.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/flopr.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/flopr.v|
+!i113 0
+R6
+R0
+vmccomp
+R1
+!i10b 1
+!s100 lXWY4IjFMZ_7OO@2L65jl0
+IH=am6Iad;B<EG=UU03EH^0
+R2
+R3
+w1606392631
+8C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mccomp.v
+FC:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mccomp.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mccomp.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mccomp.v|
+!i113 0
+R6
+R0
+vmccomp_tb
+R1
+!i10b 1
+!s100 e8MAIH:Tg?P^Y4Ho?Q9JB3
+I;_@6lnk1kEDG<C5D;4:H:2
+R2
+R3
+w1606394466
+8C:\Users\Administrator\Desktop\COD_project\source\Multi-CycleCPU\MCCPU_TB_SIM\sll\mccomp_tb.v
+FC:\Users\Administrator\Desktop\COD_project\source\Multi-CycleCPU\MCCPU_TB_SIM\sll\mccomp_tb.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:\Users\Administrator\Desktop\COD_project\source\Multi-CycleCPU\MCCPU_TB_SIM\sll\mccomp_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:\Users\Administrator\Desktop\COD_project\source\Multi-CycleCPU\MCCPU_TB_SIM\sll\mccomp_tb.v|
+!i113 0
+R6
+R0
+vmccpu
+R1
+!i10b 1
+!s100 EK8o5Kd`cI_^o@1^oShWn3
+Ig[AM;`F405OTiCX0KT:6P3
+R2
+R3
+w1606394544
+8C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mccpu.v
+FC:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mccpu.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mccpu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mccpu.v|
+!i113 0
+R6
+R0
+vmux16
+R1
+!i10b 1
+!s100 9O[PjUgfLzVbDkmd]`k`S0
+I8gNdhXd9AV<_VIQFP1Q430
+R2
+R3
+R7
+Z8 8C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mux.v
+Z9 FC:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mux.v
+L0 77
+R4
+r1
+!s85 0
+31
+R5
+Z10 !s107 C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mux.v|
+Z11 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mux.v|
+!i113 0
+R6
+R0
+vmux2
+R1
+!i10b 1
+!s100 B:GR6?eY_6[]8___?:R7m0
+I?_ad6;ZI@oP[6zg2nYJGj2
+R2
+R3
+R7
+R8
+R9
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+R10
+R11
+!i113 0
+R6
+R0
+vmux4
+R1
+!i10b 1
+!s100 YBgLhnCaKfcLR]mVROGEf0
+I[SH<0oi2>;=d6TocSS82`3
+R2
+R3
+R7
+R8
+R9
+L0 15
+R4
+r1
+!s85 0
+31
+R5
+R10
+R11
+!i113 0
+R6
+R0
+vmux8
+R1
+!i10b 1
+!s100 jWhnEEfgfc;zdnZAP2:6f0
+IR3BYncBJo7dZF^OXO]Ece1
+R2
+R3
+R7
+R8
+R9
+L0 42
+R4
+r1
+!s85 0
+31
+R5
+R10
+R11
+!i113 0
+R6
+R0
+vRF
+R1
+!i10b 1
+!s100 aKLHC]ShD]K7z^oJVFV043
+Imk^LHA@hWn=MJa7JSdNUL1
+R2
+R3
+w1606381784
+8C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/RF.v
+FC:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/RF.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/RF.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/RF.v|
+!i113 0
+R6
+R0
+n@r@f

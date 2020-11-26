@@ -1,0 +1,87 @@
+C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mccpu.v {1 {vlog -work work -vopt -stats=none C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mccpu.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module mccpu
+
+Top level modules:
+	mccpu
+
+} {} {}} C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/ctrl_encode_def.v {1 {vlog -work work -vopt -stats=none C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/ctrl_encode_def.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+
+} {} {}} C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/dm.v {1 {vlog -work work -vopt -stats=none C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/dm.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module dm
+
+Top level modules:
+	dm
+
+} {} {}} C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/EXT.v {1 {vlog -work work -vopt -stats=none C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/EXT.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module EXT
+
+Top level modules:
+	EXT
+
+} {} {}} C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mux.v {1 {vlog -work work -vopt -stats=none C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mux.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module mux2
+-- Compiling module mux4
+-- Compiling module mux8
+-- Compiling module mux16
+
+Top level modules:
+	mux2
+	mux4
+	mux8
+	mux16
+
+} {} {}} C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/alu.v {1 {vlog -work work -vopt -stats=none C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/alu.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/flopr.v {1 {vlog -work work -vopt -stats=none C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/flopr.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module flopr
+
+Top level modules:
+	flopr
+
+} {} {}} C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mccomp_tb.v {1 {vlog -work work -vopt -stats=none {C:\Users\Administrator\Desktop\COD_project\source\Multi-CycleCPU\MCCPU_TB_SIM\sll\mccomp_tb.v}
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module mccomp_tb
+
+Top level modules:
+	mccomp_tb
+
+} {} {}} C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/flopenr.v {1 {vlog -work work -vopt -stats=none C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/flopenr.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module flopenr
+
+Top level modules:
+	flopenr
+
+} {} {}} C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mccomp.v {1 {vlog -work work -vopt -stats=none C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/mccomp.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module mccomp
+
+Top level modules:
+	mccomp
+
+} {} {}} C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/RF.v {1 {vlog -work work -vopt -stats=none C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/RF.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module RF
+
+Top level modules:
+	RF
+
+} {} {}} C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/ctrl.v {1 {vlog -work work -vopt -stats=none C:/Users/Administrator/Desktop/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/sll/ctrl.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module ctrl
+
+Top level modules:
+	ctrl
+
+} {} {}}

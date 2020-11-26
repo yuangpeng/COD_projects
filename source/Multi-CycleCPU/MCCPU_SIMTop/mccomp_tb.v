@@ -13,23 +13,24 @@ module mccomp_tb();
 		.reg_sel(reg_sel),
 		.reg_data(reg_data) 
 	);
-   
+
 	initial begin
 		// load instructions into instruction memory
-		$readmemh( "mipstestloopjal_sim.dat" , U_MCCOMP.U_DM.dmem);
-		// $monitor("PC = 0x%8X, instr = 0x%8X", U_MCCOMP.PC, U_MCCOMP.instr); // used for debug
+		$readmemh("mipstestloopjal_sim.dat", U_MCCOMP.U_DM.dmem);
+		// $monitor("PC = 0x%8X, instr = 0x%8X", U_MCCOMP.PC, U_MCCOMP.instr);
+		// used for debug
 		clk = 1;
 		rstn = 1;
-		#5 ;
+		#5;
 		rstn = 0;
-		#20 ;
+		#20;
 		rstn = 1;
-		#1000 ;
+		#1000;
 		reg_sel = 7;
 	end
-   
+
 	always begin
 		#(50) clk = ~clk;
 	end
-
+	
 endmodule
