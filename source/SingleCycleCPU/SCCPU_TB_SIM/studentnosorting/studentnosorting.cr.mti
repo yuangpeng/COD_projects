@@ -12,7 +12,7 @@ Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 Top level modules:
 	RF
 
-} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/sccomp_tb.v {1 {vlog -work work -vopt -stats=none {C:\Users\Bronkape\Documents\WHUer\COD_project\source\SingleCycleCPU\SCCPU_TB_SIM\studentnosorting\sccomp_tb.v}
+} {} {}} C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/sccomp_tb.v {1 {vlog -work work -vopt -stats=none C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/sccomp_tb.v
 Model Technology ModelSim SE-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 -- Compiling module sccomp_tb
 

@@ -1,7 +1,37 @@
+# Reading C:/modeltech64_2019.4/tcl/vsim/pref.tcl
+# //  ModelSim SE-64 2019.4 Oct 15 2019
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# OpenFile C:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting/studentnosorting.mpf
+# Loading project studentnosorting
+# Compile of PC.v was successful.
+# Compile of mux.v was successful.
+# Compile of alu.v was successful.
+# Compile of EXT.v was successful.
+# Compile of NPC.v was successful.
+# Compile of ctrl_encode_def.v was successful.
+# Compile of ctrl.v was successful.
+# Compile of RF.v was successful.
+# Compile of sccpu.v was successful.
+# Compile of dm.v was successful.
+# Compile of im.v was successful.
+# Compile of sccomp.v was successful.
+# Compile of sccomp_tb.v was successful.
+# 13 compiles, 0 failed with no errors.
 vsim -voptargs=+acc work.sccomp_tb
 # vsim -voptargs="+acc" work.sccomp_tb 
-# Start time: 11:44:02 on Nov 25,2020
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Start time: 17:35:01 on Nov 26,2020
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading work.sccomp_tb(fast)
 # Loading work.sccomp(fast)
 # Loading work.sccpu(fast)
@@ -18,7 +48,7 @@ vsim -voptargs=+acc work.sccomp_tb
 # Loading work.im(fast)
 add wave -position insertpoint  \
 sim:/sccomp_tb/U_SCCOMP/U_SCCPU/U_RF/rf
-run 2000
+run 50000
 # r[ 2] = 0x54870000,
 # r[ 2] = 0x54873530,
 # dmem[0x00000100] = 0x54873530,
@@ -37,7 +67,6 @@ run 2000
 # r[10] = 0x00000004,
 # r[ 8] = 0x00000003,
 # r[14] = 0x00000001,
-run 44000
 # r[13] = 0x00000003,
 # r[12] = 0x00000001,
 # r[ 5] = 0x00000f00,
@@ -372,7 +401,6 @@ run 44000
 # dmem[0x00000104] = 0x03345578,
 # r[ 2] = 0xffff0000,
 # r[ 1] = 0xffff0004,
-run 3000
 # r[ 2] = 0xffff000c,
 # r[ 3] = 0xxxxxxxxx,
 # r[ 3] = 0x00000X00,
@@ -391,5 +419,11 @@ run 3000
 # r[ 3] = 0x03345578,
 # dmem[0x0000000c] = 0x03345578,
 # r[ 3] = 0xxxxxxxxx,
-# End time: 11:46:40 on Nov 25,2020, Elapsed time: 0:02:38
-# Errors: 26, Warnings: 0
+# r[ 3] = 0x00000X00,
+# r[ 3] = 0x03345578,
+# dmem[0x0000000c] = 0x03345578,
+# r[ 3] = 0xxxxxxxxx,
+# r[ 3] = 0x00000X00,
+# r[ 3] = 0x03345578,
+# End time: 17:35:40 on Nov 26,2020, Elapsed time: 0:00:39
+# Errors: 14, Warnings: 0
