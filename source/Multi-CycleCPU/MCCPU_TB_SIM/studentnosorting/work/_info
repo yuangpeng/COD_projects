@@ -1,0 +1,344 @@
+m255
+K4
+z2
+!s11f vlog 2019.4 2019.10, Oct 15 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Bronkape/Documents/WHUer/COD_project/source/SingleCycleCPU/SCCPU_TB_SIM/studentnosorting
+T_opt
+!s110 1606479673
+V65?TNjURfLdMKoLnD;FND3
+04 9 4 work mccomp_tb fast 0
+=1-2cf05d930d10-5fc0ef39-16a-3a90
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2019.4;69
+valu
+Z1 !s110 1606479670
+!i10b 1
+!s100 MP`R=m<7iHk?6M@G^nEQZ2
+!s11b e;3iW[X[fTSB45_:1zAO50
+InG=A?fYM`M4YYZ8Kg6RnP0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting
+w1606479333
+8C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/alu.v
+FC:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/alu.v
+!i122 -1
+L0 3
+Z4 OL;L;2019.4;69
+r1
+!s85 0
+31
+Z5 !s108 1606479670.000000
+!s107 ctrl_encode_def.v|C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/alu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/alu.v|
+!i113 0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vctrl
+Z7 !s110 1606479669
+!i10b 1
+!s100 :AcJ5:B:ObT<Aedm0L82O0
+!s11b W;4Xn20:Ha_kUakJV0MDR2
+IO1P3G9Q=W06Qlc:Hi:79A1
+R2
+R3
+Z8 w1606472941
+8C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/ctrl.v
+FC:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/ctrl.v
+!i122 -1
+L0 3
+R4
+r1
+!s85 0
+31
+Z9 !s108 1606479669.000000
+!s107 ctrl_encode_def.v|C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/ctrl.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/ctrl.v|
+!i113 0
+R6
+R0
+vdm
+R1
+!i10b 1
+!s100 ljmPB9Zg8NZ7kaVnOOIGF1
+!s11b V>G1Z=n=>1YgP?bmAN<OX0
+IVU3g3ZU4Me?2oeH8LYAe12
+R2
+R3
+w1606392790
+8C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/dm.v
+FC:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/dm.v
+!i122 -1
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/dm.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/dm.v|
+!i113 0
+R6
+R0
+vEXT
+R7
+!i10b 1
+!s100 hSc?e;oh6_M4XkLhH[a@U1
+!s11b V2?QkF>3nG??MQ<gIXmbK1
+IYaOz:2^P>V]0JE5<@mDUP3
+R2
+R3
+Z10 w1605864260
+8C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/EXT.v
+FC:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/EXT.v
+!i122 -1
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/EXT.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/EXT.v|
+!i113 0
+R6
+R0
+n@e@x@t
+vflopenr
+R7
+!i10b 1
+!s100 0>;SkD4km5=@fh[Ya8gh[3
+!s11b hZV3I]obEZdnDa2HZ?:DK2
+I^_SmN>Hh2^Z6j00U9?`g_0
+R2
+R3
+w1606382496
+8C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/flopenr.v
+FC:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/flopenr.v
+!i122 -1
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/flopenr.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/flopenr.v|
+!i113 0
+R6
+R0
+vflopr
+R7
+!i10b 1
+!s100 AKCAkTR@0hQL<m85_F;Gn2
+!s11b jCNA@U5eSeegodYOnCZeW1
+I]4U`lf7>cnL>`SC7l3=6f2
+R2
+R3
+w1606382490
+8C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/flopr.v
+FC:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/flopr.v
+!i122 -1
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/flopr.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/flopr.v|
+!i113 0
+R6
+R0
+vmccomp
+R1
+!i10b 1
+!s100 Dj1c<AMCji57TbNWe@l9k3
+!s11b ACD`ZeN>fQZ?TUb:^0GDZ0
+I5NbU>Ob>P_IYeI[LziGHA1
+R2
+R3
+w1606392632
+8C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mccomp.v
+FC:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mccomp.v
+!i122 -1
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mccomp.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mccomp.v|
+!i113 0
+R6
+R0
+vmccomp_tb
+R1
+!i10b 1
+!s100 o5TYP5<LP_c@GO5gJ9]CS2
+!s11b lR9D=nPVIk`E=ajd>[^h?1
+IaV435`7jUKZah<;k@UcO83
+R2
+R3
+w1606473135
+8C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mccomp_tb.v
+FC:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mccomp_tb.v
+!i122 -1
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mccomp_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mccomp_tb.v|
+!i113 0
+R6
+R0
+vmccpu
+R1
+!i10b 1
+!s100 g=omhmPz8ZahhEfGm[RQE3
+!s11b OBciP;@bLkdQg:fDSl9622
+IbBf0[A>7VcS2SGJGI5G230
+R2
+R3
+R8
+8C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mccpu.v
+FC:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mccpu.v
+!i122 -1
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mccpu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mccpu.v|
+!i113 0
+R6
+R0
+vmux16
+R1
+!i10b 1
+!s100 FE:gA:5RTKP_j7SbfMdo:2
+!s11b G^[A[4LWG<Le7Z5Rlnh<B0
+I]7jAdNU=d[_iHGP@kjMgT3
+R2
+R3
+R10
+Z11 8C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mux.v
+Z12 FC:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mux.v
+!i122 -1
+L0 77
+R4
+r1
+!s85 0
+31
+R5
+Z13 !s107 C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mux.v|
+Z14 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/mux.v|
+!i113 0
+R6
+R0
+vmux2
+R1
+!i10b 1
+!s100 m7oczm0<Q8TkGDkCLU`[H3
+!s11b Ed<7QNQX5fI<i:R^_2N3l1
+IETfjmGK9mljN8Hg0l:a>D3
+R2
+R3
+R10
+R11
+R12
+!i122 -1
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+R13
+R14
+!i113 0
+R6
+R0
+vmux4
+R1
+!i10b 1
+!s100 NMb1MQgW9zGP8cQObfXFQ2
+!s11b j4HmYbc<VinzW7VG3S]?L0
+IEA<aTO1Df^1hMOBVCV>Tb2
+R2
+R3
+R10
+R11
+R12
+!i122 -1
+L0 15
+R4
+r1
+!s85 0
+31
+R5
+R13
+R14
+!i113 0
+R6
+R0
+vmux8
+R1
+!i10b 1
+!s100 gz0JQ_AVLC^X:@j4NnU=m3
+!s11b DVTIi<H]e1HAlZ@O>n7l13
+ICkZaS7UAN=6I52?iZZ=_<1
+R2
+R3
+R10
+R11
+R12
+!i122 -1
+L0 42
+R4
+r1
+!s85 0
+31
+R5
+R13
+R14
+!i113 0
+R6
+R0
+vRF
+R1
+!i10b 1
+!s100 knK5[znE2cLK?E`iUoT1f1
+!s11b 7^eSkjVYRF9aA[MI<7Z6O1
+ICHYALOgR>iW45UNL6oPXl0
+R2
+R3
+w1606381784
+8C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/RF.v
+FC:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/RF.v
+!i122 -1
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/RF.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Bronkape/Documents/WHUer/COD_project/source/Multi-CycleCPU/MCCPU_TB_SIM/studentnosorting/RF.v|
+!i113 0
+R6
+R0
+n@r@f
