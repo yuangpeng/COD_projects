@@ -17,14 +17,14 @@ output	[31:0]	reg_data		// selected register data (for debug use)
 	wire      	  	PCWrite;		// control signal for PC write
 	wire      	  	IRWrite;		// control signal for IR write
 	wire        	EXTOp;			// control signal to signed extension
-	wire	[2:0]	ALUOp;			// ALU opertion
+	wire	[3:0]	ALUOp;			// ALU opertion
 	wire 	[1:0]  	PCSource;		// next PC operation
 	wire        	IorD;			// memory access for instruction or data
 
 	wire	[1:0]	WDSel;			// (register) write data selection
 	wire	[1:0]	GPRSel;			// general purpose register selection
 
-	wire	[1:0]	ALUSrcA;		// ALU source for A
+	wire	[2:0]	ALUSrcA;		// ALU source for A
 	wire	[1:0]	ALUSrcB;		// ALU source for B
 	wire			Zero;			// ALU ouput zero
 
@@ -44,6 +44,7 @@ output	[31:0]	reg_data		// selected register data (for debug use)
 	wire	[4:0]	A3;          	// register address for write
 	wire	[31:0]	WD;          	// register write data
 	wire	[31:0]	RD1;         	// register data specified by rs
+	wire	[31:0]	RD1LOW5;		// register data specified by rs[4:0]
 	wire	[31:0]	RD2;         	// register data specified by rt 
 	wire	[31:0]	A;           	// register A
 	wire	[31:0]	B;           	// register B
@@ -61,6 +62,7 @@ output	[31:0]	reg_data		// selected register data (for debug use)
 	assign Imm16	= instr[15:0];				// 16-bit immediate
 	assign IMM		= instr[25:0];				// 26-bit immediate
 	assign shamt	= {27'b0, instr[10:6]};		// (27+5)-bit shamt
+	assign RD1LOW5	= {27'b0, RD1[4:0]};		// (27+5)-bit shamt
 	assign luiImm32	= {instr[15:0], 16'b0};		// upper imm16 + 16b'0
    
 	// instantiation of control unit
@@ -98,7 +100,7 @@ output	[31:0]	reg_data		// selected register data (for debug use)
 		.d0(aluresult),
 		.d1(aluout),
 		.d2({PC[31:28], IMM, 2'b00}),
-		.d3(32'b0),
+		.d3(RD1),
 		.s(PCSource),
 		.y(NPC)
 	);
@@ -159,11 +161,12 @@ output	[31:0]	reg_data		// selected register data (for debug use)
 	);
 
 	// mux for ALU A
-	mux4 #(32) U_MUX_ALU_A(
+	mux8 #(32) U_MUX_ALU_A(
 		.d0(PC),
 		.d1(A),
 		.d2(shamt),
 		.d3(luiImm32),
+		.d4(RD1LOW5),
 		.s(ALUSrcA),
 		.y(ALUA)
 	); 
